@@ -3,7 +3,8 @@ class AccountsController < ApplicationController
 
   # GET /accounts
   def index
-    @accounts = Account.page(params[:page]).per(10)
+    @q = Account.ransack(params[:q])
+    @accounts = @q.result(:distinct => true).includes(:bookmarks, :reviews).page(params[:page]).per(10)
   end
 
   # GET /accounts/1

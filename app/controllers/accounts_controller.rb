@@ -8,6 +8,8 @@ class AccountsController < ApplicationController
 
   # GET /accounts/1
   def show
+    @review = Review.new
+    @bookmark = Bookmark.new
   end
 
   # GET /accounts/new

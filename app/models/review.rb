@@ -14,5 +14,4 @@ class Review < ApplicationRecord
   def to_s
     account.to_s
   end
-
 end

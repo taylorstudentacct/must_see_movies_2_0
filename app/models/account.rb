@@ -2,10 +2,10 @@ class Account < ApplicationRecord
   # Direct associations
 
   has_many   :reviews,
-             :dependent => :destroy
+             dependent: :destroy
 
   has_many   :bookmarks,
-             :dependent => :destroy
+             dependent: :destroy
 
   # Indirect associations
 
@@ -16,5 +16,4 @@ class Account < ApplicationRecord
   def to_s
     username
   end
-
 end

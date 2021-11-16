@@ -7,12 +7,20 @@
     <dl class="mb-1">
       <dt>Account</dt>
       <!-- Display account_id start -->
-      <dd><%= review.account_id %></dd>
+      <dd>
+        <% if @review.account.present? %>
+          <%= link_to review.account, review.account %>
+        <% end %>
+      </dd>
       <!-- Display account_id end -->
 
       <dt>Movie</dt>
       <!-- Display movie_id start -->
-      <dd><%= review.movie_id %></dd>
+      <dd>
+        <% if @review.movie.present? %>
+          <%= link_to review.movie, review.movie %>
+        <% end %>
+      </dd>
       <!-- Display movie_id end -->
 
       <dt>Description</dt>
